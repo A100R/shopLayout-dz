@@ -1,1 +1,1 @@
-https://www.figma.com/design/SbfOi2i4S1pIs0G6uOLPCx/shop--Copy-?node-id=0-1&p=f&t=tpZJFODrsFaUFi76-0
+https://www.figma.com/design/mnLY69cYE5cqWM5w6n5hXx/Seo---Digital-Marketing-Landing-Page?node-id=188-2&p=f&t=8tVo0KVuVXOmwJ5h-0
