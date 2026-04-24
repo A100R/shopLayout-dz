@@ -10,11 +10,22 @@ body {
     scroll-behavior: smooth;
 }
 img {
-    display: block;
     max-width: 100%;
 }
 
+h2, h3, p {
+    font-family: Lato;
+}
+
+.center {
+    padding-left: calc(50% - 570px);
+    padding-right: calc(50% - 570px);
+}
+
 .header {
+    max-width: 1600px;
+    min-width: 375px;
+
 }
 .navigation {
     display: flex;
@@ -28,21 +39,19 @@ img {
     flex-direction: row;
     gap: 41px;
 }
-.btn {
+.btn-nav {
     display: flex;
-    /* color: #E8E8E8; */
+    color: #E8E8E8;
     gap: 33px;
 }
-h2, h3, p {
-    font-family: Lato;
-}
+
 
 .banner {
-    /* max-width: 1600px; */
     background: #F1E4E6;
     display: flex;
     align-items: center;
     margin-bottom: 65px;
+    min-height: 363px;
 }
 .brand {
     margin-left: 63px;
@@ -71,16 +80,12 @@ h2, h3, p {
 
 }
 
-.container {
-    padding-left: calc(50% - 570px);
-    padding-right: calc(50% - 570px);
-}
+
 .cardList {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 30px;
-
 }
 
 .card {
@@ -88,6 +93,7 @@ h2, h3, p {
     font-weight: 400;
     font-size: 16px;
     color: #FFFFFF;
+    box-sizing: border-box;
 }
 .card1 {
     background-repeat: no-repeat;
@@ -152,29 +158,28 @@ h2, h3, p {
 
 
 
-
-.mainContent {
-    margin-bottom: 60px;
-}
+/* .mainContent {
+    position: relative;
+} */
 .mainContent h2 {
     text-align: center;
     margin-bottom: 6px;
 }
 .head {
     text-align: center;
+    margin-bottom: 48px;
+
 }
 .mainContent p {
-    margin-bottom: 48px;
     color: #9F9F9F;
-
 }
 
-/* .cardList {
+.cardModelList {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 30px;
-} */
+}
 .cardModel {
     margin-bottom: 24px;
 }
@@ -186,11 +191,19 @@ h2, h3, p {
     margin-top: 16px;
     margin-bottom: 16px;
 }
-.price {
+.price span {
     color:  #F16D7F
 }
 
-.baseline {
-    /* display: block;
-    justify-content: center; */
+
+button {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    padding: 15px 40px;
+    color: #F26376;
+    background-color: white;
+    display: flex;
+    border: 1px solid #FF6A6A;
+    margin-top: 48px;
 }
