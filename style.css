@@ -9,22 +9,18 @@
 body {
     scroll-behavior: smooth;
 }
-img {
+/* img {
     max-width: 100%;
-}
+    max-height: 100%;
+} */
 
 h2, h3, p {
     font-family: Lato;
 }
 
-.center {
-    padding-left: calc(50% - 570px);
-    padding-right: calc(50% - 570px);
-}
-
 .header {
-    max-width: 1600px;
-    min-width: 375px;
+    /* max-width: 1600px;
+    min-width: 375px; */
 
 }
 .navigation {
@@ -39,12 +35,15 @@ h2, h3, p {
     flex-direction: row;
     gap: 41px;
 }
+
 .btn-nav {
     display: flex;
-    color: #E8E8E8;
     gap: 33px;
 }
-
+button {
+    background: #222222;
+    color: #E8E8E8;
+}
 
 .banner {
     background: #F1E4E6;
@@ -53,6 +52,9 @@ h2, h3, p {
     margin-bottom: 65px;
     min-height: 363px;
 }
+.banner img {
+    width: 800px;
+}
 .brand {
     margin-left: 63px;
     box-sizing: border-box;
@@ -60,7 +62,6 @@ h2, h3, p {
     padding-left: 16px;
     width: 405px;
 }
-
 .brand h2 {
     font-family: Lato;
     font-weight: 900;
@@ -75,19 +76,24 @@ h2, h3, p {
 .banner span {
     color:  #F16D7F;
     font-weight: 700;
-    font-size: 32px;
     line-height: 100%;
-
 }
 
+
+/* .mainContent {
+} */
+.center {
+    padding-left: calc(50% - 570px);
+    padding-right: calc(50% - 570px);
+}
 
 .cardList {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 30px;
+    margin-bottom: 96px;
 }
-
 .card {
     font-family: Lato;
     font-weight: 400;
@@ -109,10 +115,12 @@ h2, h3, p {
     background-repeat: no-repeat;
     background-image: url(./img/Card3.png);
     background-size: 360px 260px;
+
 }
 .cardbase {
-    grid-column: span 3;
-    grid-template: span 1;
+    /* grid-row: 2/3;
+    grid-column: 1/4; */
+    grid-area: 2/1/span 1/span 3;
     background-repeat: no-repeat;
     background-image: url(./img/Card4.png);
     background-size: 1400px 180px;
@@ -128,11 +136,10 @@ h2, h3, p {
     width: 1140px;
     height: 180px;
 }
-
 .into {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     padding: 103px;
 }
 .intoBase {
@@ -156,32 +163,23 @@ h2, h3, p {
     line-height: 100%;
 }
 
-
-
-/* .mainContent {
-    position: relative;
-} */
 .mainContent h2 {
     text-align: center;
     margin-bottom: 6px;
 }
-.head {
-    text-align: center;
-    margin-bottom: 48px;
-
-}
 .mainContent p {
     color: #9F9F9F;
 }
-
+.paragraph__head {
+    text-align: center;
+}
 .cardModelList {
+    margin-top: 48px;
+    margin-bottom: 48px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 30px;
-}
-.cardModel {
-    margin-bottom: 24px;
 }
 .discribeCardModel {
     padding-top: 24px;
@@ -195,15 +193,91 @@ h2, h3, p {
     color:  #F16D7F
 }
 
-
-button {
+.btnDown {
     display: block;
     margin: 0 auto;
-    margin-bottom: 60px;
     padding: 15px 40px;
     color: #F26376;
     background-color: white;
-    display: flex;
     border: 1px solid #FF6A6A;
     margin-top: 48px;
+    margin-bottom: 60px;
+}
+
+@media(min-width: 768px) and (max-width: 1140px) {
+    .header {
+        max-width: 736px;
+    }
+    .btn-nav {
+        gap: 20px;
+    }
+    .brand {
+        width: 311px;
+    }
+    .banner img {
+        max-width: 386px;
+    }
+    .brand {
+        margin-left: 40px;
+        box-sizing: border-box;
+        border-left: 12px solid #F16D7F;
+        padding-left: 16px;
+        width: 311px;
+    }
+    .brand h2 {
+        font-family: Lato;
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 100%;
+    }
+    .brand h3 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 100%;
+    }
+    .banner span {
+        color:  #F16D7F;
+        font-weight: 700;
+        line-height: 100%;
+    }
+
+    .center {
+        max-width: 736px;
+        padding-left: calc(50% - 368px);
+        padding-right: calc(50% - 368px);
+    }
+
+    .cardList {
+        gap: 19px;
+    }
+    .backColors {
+        background-color:#211616B2;
+        width: 232px;
+        height: 167px;
+    }
+    .backColorsCardbase {
+        background-color:#211616B2;
+        width: 734.5px;
+        height: 116.09px;
+    }
+
+    .cardModelList {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 16px;
+    }
+    .into {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 59px 39px;
+    }
+    .intoBase {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 33px 287px;
+    }
+    
 }
