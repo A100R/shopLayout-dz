@@ -9,26 +9,29 @@
 body {
     scroll-behavior: smooth;
 }
-/* img {
+img {
+    display: block;
     max-width: 100%;
-    max-height: 100%;
-} */
-
+}
 h2, h3, p {
     font-family: Lato;
+}
+.center {
+    padding-left: calc(50% - 570px);
+    padding-right: calc(50% - 570px);
 }
 
 .header {
     /* max-width: 1600px;
     min-width: 375px; */
-
 }
 .navigation {
     display: flex;
     justify-content: space-between;
     background: #222222;
     align-items: center;
-    padding: 18px 230px 19px 230px;
+    padding-top: 18px;
+    padding-bottom: 18px;
 }
 .logo {
     display: flex;
@@ -53,10 +56,11 @@ button {
     min-height: 363px;
 }
 .banner img {
-    width: 800px;
+    max-width: 800px;
 }
 .brand {
-    margin-left: 63px;
+    flex-wrap: nowrap;
+    margin-left: 60px;
     box-sizing: border-box;
     border-left: 12px solid #F16D7F;
     padding-left: 16px;
@@ -73,7 +77,7 @@ button {
     font-size: 32px;
     line-height: 100%;
 }
-.banner span {
+.brand span {
     color:  #F16D7F;
     font-weight: 700;
     line-height: 100%;
@@ -82,10 +86,7 @@ button {
 
 /* .mainContent {
 } */
-.center {
-    padding-left: calc(50% - 570px);
-    padding-right: calc(50% - 570px);
-}
+
 
 .cardList {
     display: grid;
@@ -163,11 +164,13 @@ button {
     line-height: 100%;
 }
 
-.mainContent h2 {
+/* modelLists */
+
+.modelLists h2 {
     text-align: center;
     margin-bottom: 6px;
 }
-.mainContent p {
+.modelLists p {
     color: #9F9F9F;
 }
 .paragraph__head {
@@ -182,8 +185,8 @@ button {
     gap: 30px;
 }
 .discribeCardModel {
-    padding-top: 24px;
-    padding-left: 16px;
+    background-color: #F8F8F8;
+    padding: 24px 28px 20px 16px;
 }
 .discribeCardModel p {
     margin-top: 16px;
@@ -208,6 +211,10 @@ button {
     .header {
         max-width: 736px;
     }
+    .navigation {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
     .btn-nav {
         gap: 20px;
     }
@@ -219,6 +226,7 @@ button {
     }
     .brand {
         margin-left: 40px;
+        margin-right: 33px;
         box-sizing: border-box;
         border-left: 12px solid #F16D7F;
         padding-left: 16px;
@@ -235,7 +243,7 @@ button {
         font-size: 24px;
         line-height: 100%;
     }
-    .banner span {
+    .brand span {
         color:  #F16D7F;
         font-weight: 700;
         line-height: 100%;
@@ -243,12 +251,13 @@ button {
 
     .center {
         max-width: 736px;
-        padding-left: calc(50% - 368px);
-        padding-right: calc(50% - 368px);
+        /* padding-left: calc(50% - 368px);
+        padding-right: calc(50% - 368px); */
     }
 
     .cardList {
         gap: 19px;
+        max-width: 736px;
     }
     .backColors {
         background-color:#211616B2;
@@ -279,5 +288,5 @@ button {
         justify-content: center;
         padding: 33px 287px;
     }
-    
+
 }
